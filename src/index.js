@@ -7,8 +7,12 @@ const productRouthandler = require("./controller/product.controller");
 const userRouthandler = require("./controller/user.controller");
 const cartRouthandler = require("./controller/cart.controller");
 const addressRouthandler = require("./controller/address.controller");
+const docRouthandler = require("./controller/ejs.controller");
 
 const { register, login } = require("./controller/signup.controller");
+app.set("view engine", "ejs");
+
+app.use("", docRouthandler);
 
 app.use("/products", productRouthandler);
 app.use("/users", userRouthandler);
