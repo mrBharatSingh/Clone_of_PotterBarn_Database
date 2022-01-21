@@ -24,6 +24,6 @@ app.use("/cart", cartRouthandler);
 app.use("/address", addressRouthandler);
 
 app.post("/register", register);
-app.get("/login", login);
+app.post("/login", login);
 
 module.exports = app;
