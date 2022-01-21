@@ -30,14 +30,12 @@ const login = async (req, res) => {
   try {
     let user = await User.findOne({ email: req.body.email });
 
-    if (!user)
-      return res
-        .status(400)
-        .send({ message: "either email or password not match1" });
+    if (!user) return res.status(400).send({ message: " Email is not match1" });
     // console.log(user);
     const match = user.chackPassword(req.body.password);
 
-    if (!match) return res.status(400).send({ message: " password not match" });
+    if (!match)
+      return res.status(400).send({ message: " Password is not match" });
 
     const token = newToken(user);
 
