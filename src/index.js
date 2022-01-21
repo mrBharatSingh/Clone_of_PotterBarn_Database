@@ -11,6 +11,7 @@ const docRouthandler = require("./controller/ejs.controller");
 
 const { register, login } = require("./controller/signup.controller");
 app.set("view engine", "ejs");
+app.use(express.static("public"));
 
 app.use("", docRouthandler);
 
