@@ -111,10 +111,11 @@ const register = async (req, res) => {
                       color: white;
                       font-size: 20px;
                       font-weight: bold;
+                      margin: auto;
                   }
       
                   #icont0 {
-                      width: 300px;
+                      width: 350px;
                       height: 60px;
                       background-color: blue;
                       display: flex;
