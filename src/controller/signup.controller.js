@@ -26,95 +26,105 @@ const register = async (req, res) => {
       to: req.body.email,
       subject: `Welcome to PottryBarn ${req.body.name} `,
       text: `Hi ${req.body.name}, Please confirm your email address`,
-      html: `<html>
-
+      html: `<!DOCTYPE html>
+      <html lang="en">
+      
       <head>
-          <style>
-              body {
-                  font-family: Arial, Helvetica, sans-serif;
-              }
-      
-              body {
-                  background-color: rgb(246, 244, 238);
-              }
-      
-              #t1 {
-      
-                  text-align: center;
-      
-                  font-size: 23px;
-                  font-weight: bold;
-                  color: blue;
-                  margin-top: 20px;
-              }
-      
-              #cont {
-                  margin: auto;
-                  /* border: 1px solid red; */
-                  width: 100%;
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
       
       
-              }
       
-              #cont1 {
-                  width: 93%;
-                  height: 500px;
-                  /* border: 1px solid black; */
-                  margin: auto;
-                  margin-top: 20px;
-                  background-color: rgb(255, 255, 255);
-              }
+          <head>
+              <style>
+                  body {
+                      font-family: Arial, Helvetica, sans-serif;
+                  }
       
-              #icont {
-                  width: 60%;
-                  /* border: 1px solid rgb(194, 56, 56); */
+                  body {
+                      background-color: rgb(246, 244, 238);
+                  }
       
-                  height: 100%;
-                  margin: auto;
+                  #t1 {
       
-              }
+                      text-align: center;
       
-              #img1 {
-                  padding: auto;
-                  margin: 30px 45% 5px;
+                      font-size: 23px;
+                      font-weight: bold;
+                      color: blue;
+                      margin-top: 20px;
+                  }
       
-                  width: 90px;
-                  opacity: 80%;
-              }
+                  #cont {
+                      margin: auto;
+                      /* border: 1px solid red; */
+                      width: 100%;
       
-              #t2 {
-                  text-align: center;
-                  font-size: 23px;
-                  font-weight: bold;
-                  margin-top: 15px;
-              }
       
-              hr {
-                  margin-top: 2px;
-              }
+                  }
       
-              #t3 {
-                  text-align: center;
-              }
+                  #cont1 {
+                      width: 93%;
+                      height: 500px;
+                      /* border: 1px solid black; */
+                      margin: auto;
+                      margin-top: 20px;
+                      background-color: rgb(255, 255, 255);
+                  }
       
-              #t4 {
+                  #icont {
+                      width: 60%;
+                      /* border: 1px solid rgb(194, 56, 56); */
       
-                  color: white;
-                  font-size: 20px;
-                  font-weight: bold;
-              }
+                      height: 100%;
+                      margin: auto;
       
-              #icont0 {
-                  width: 100%;
-                  height: 60px;
-                  background-color: blue;
-                  display: flex;
-                  justify-content: center;
-                  border-radius: 10px;
+                  }
       
-              }
-          </style>
-      </head>
+                  #img1 {
+                      padding: auto;
+                      margin: 30px 45% 5px;
+      
+                      width: 90px;
+                      opacity: 80%;
+                  }
+      
+                  #t2 {
+                      text-align: center;
+                      font-size: 23px;
+                      font-weight: bold;
+                      margin-top: 15px;
+                  }
+      
+                  hr {
+                      margin-top: 2px;
+                  }
+      
+                  #t3 {
+                      text-align: center;
+                  }
+      
+                  #t4 {
+      
+                      color: white;
+                      font-size: 20px;
+                      font-weight: bold;
+                  }
+      
+                  #icont0 {
+                      width: 300px;
+                      height: 60px;
+                      background-color: blue;
+                      display: flex;
+                      justify-content: center;
+                      border-radius: 10px;
+                      margin: auto;
+      
+                  }
+              </style>
+          </head>
       
       <body>
           <div id="cont">
@@ -130,14 +140,14 @@ const register = async (req, res) => {
                   <hr>
                   <p id="t3">In order to start using your <b>Pottery Barn</b> account, you need to <br> confirm your email
                       address.</p>
-                      <div style="display: flex; text-align: center; justify-content: center; margin: auto;">
-                        <a href="https://potterybarn-database.herokuapp.com/users/verify/${user._id}">
-                        <div id="icont0">
-                            <p id="t4">Verify Email Address</p>
-                        </div>
+                  <div>
+                      <a href="https://potterybarn-database.herokuapp.com/users/verify/${user._id}">
+                          <div id="icont0">
+                              <p id="t4">Verify Email Address</p>
+                          </div>
                       </a>
-                      </div>
-                  
+                  </div>
+      
       
                   <br> <br>
                   <hr width="150px">
