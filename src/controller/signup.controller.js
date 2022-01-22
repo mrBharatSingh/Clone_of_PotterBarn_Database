@@ -119,8 +119,10 @@ const register = async (req, res) => {
                       background-color: blue;
                       display: flex;
                       justify-content: center;
+                      text-align: center;
                       border-radius: 10px;
                       margin: auto;
+                      margin-left: auto;
       
                   }
               </style>
