@@ -34,4 +34,20 @@ router.post("", async (req, res) => {
   }
 });
 
+router.post(":id", async (req, res) => {
+  try {
+    const cart = await Cart.create({
+      product_id: req.product_id,
+      user_id: req.params.id,
+      image: req.image,
+      name: req.name,
+      price: req.price,
+    });
+
+    res.status(201).send(cart);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 module.exports = router;
