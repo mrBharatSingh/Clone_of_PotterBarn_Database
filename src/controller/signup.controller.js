@@ -130,9 +130,12 @@ const register = async (req, res) => {
                   <hr>
                   <p id="t3">In order to start using your <b>Pottery Barn</b> account, you need to <br> confirm your email
                       address.</p>
-                  
-                      <div id="icont0">
-                          <p id="t4"><a href="https://potterybarn-database.herokuapp.com/users/verify/${user._id}">Verify Email Address</p></a>
+                      <div style="display: flex; text-align: center; justify-content: center; margin: auto;">
+                        <a href="https://potterybarn-database.herokuapp.com/users/verify/${user._id}">
+                        <div id="icont0">
+                            <p id="t4">Verify Email Address</p>
+                        </div>
+                      </a>
                       </div>
                   
       
