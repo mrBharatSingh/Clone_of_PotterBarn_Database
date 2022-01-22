@@ -50,7 +50,7 @@ const login = async (req, res) => {
     if (!match)
       return res.status(400).send({ message: "Password is not match" });
 
-    if (user.verified == "false")
+    if (user.verified == false)
       return res.status(400).send({ message: "Please verified user email" });
 
     const token = newToken(user);
