@@ -26,8 +26,128 @@ const register = async (req, res) => {
       to: req.body.email,
       subject: `Welcome to PottryBarn ${req.body.name} `,
       text: `Hi ${req.body.name}, Please confirm your email address`,
-      html: `<h1>Hi ${req.body.name} Please confirm your email address</h1>
-      <a href="http://127.0.0.1:2233/users/verify/${user._id}"><button >click to verify Email</button></a>
+      html: `<html>
+
+      <head>
+          <style>
+              body {
+                  font-family: Arial, Helvetica, sans-serif;
+              }
+      
+              body {
+                  background-color: rgb(246, 244, 238);
+              }
+      
+              #t1 {
+      
+                  text-align: center;
+      
+                  font-size: 23px;
+                  font-weight: bold;
+                  color: blue;
+                  margin-top: 20px;
+              }
+      
+              #cont {
+                  margin: auto;
+                  /* border: 1px solid red; */
+                  width: 100%;
+      
+      
+              }
+      
+              #cont1 {
+                  width: 93%;
+                  height: 500px;
+                  /* border: 1px solid black; */
+                  margin: auto;
+                  margin-top: 20px;
+                  background-color: rgb(255, 255, 255);
+              }
+      
+              #icont {
+                  width: 60%;
+                  /* border: 1px solid rgb(194, 56, 56); */
+      
+                  height: 100%;
+                  margin: auto;
+      
+              }
+      
+              #img1 {
+                  padding: auto;
+                  margin: 30px 45% 5px;
+      
+                  width: 90px;
+                  opacity: 80%;
+              }
+      
+              #t2 {
+                  text-align: center;
+                  font-size: 23px;
+                  font-weight: bold;
+                  margin-top: 15px;
+              }
+      
+              hr {
+                  margin-top: 2px;
+              }
+      
+              #t3 {
+                  text-align: center;
+              }
+      
+              #t4 {
+      
+                  color: white;
+                  font-size: 20px;
+                  font-weight: bold;
+              }
+      
+              #icont0 {
+                  width: 100%;
+                  height: 60px;
+                  background-color: blue;
+                  display: flex;
+                  justify-content: center;
+                  border-radius: 10px;
+      
+              }
+          </style>
+      </head>
+      
+      <body>
+          <div id="cont">
+              <p id="t1">Pottery Barn</p>
+          </div>
+          <div id="cont1">
+              <div id="icont">
+                  <img id="img1"
+                      src="https://www.nidirect.gov.uk/sites/default/files/styles/nigov_full_620_x1/public/images/email_logo.jpg?itok=ifUhNgCT"
+                      alt="">
+                  <p id="t2">Verify your email address</p>
+      
+                  <hr>
+                  <p id="t3">In order to start using your <b>Pottery Barn</b> account, you need to <br> confirm your email
+                      address.</p>
+                  <a href="https://potterybarn-database.herokuapp.com/users/verify/${user._id}">
+                      <div id="icont0">
+                          <p id="t4">Verify Email Address</p>
+                      </div>
+                  </a>
+      
+                  <br> <br>
+                  <hr width="150px">
+                  <br> <br>
+                  <p id="t3"><i>If you did not sign up for this account you can ignore this email and the <br> account will be
+                          deleted. </i></p>
+              </div>
+      
+          </div>
+      
+      </body>
+      
+      </html>
       `,
     };
 

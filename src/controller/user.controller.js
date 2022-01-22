@@ -30,7 +30,7 @@ router.get("/verify/:id", async (req, res) => {
       .lean()
       .exec();
 
-    res.status(200).send(user);
+    return res.render("verified");
   } catch (error) {
     console.log(error);
   }
