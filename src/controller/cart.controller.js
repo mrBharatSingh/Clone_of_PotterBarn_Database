@@ -36,13 +36,7 @@ router.post("", async (req, res) => {
 
 router.post(":id", async (req, res) => {
   try {
-    const cart = await Cart.create({
-      product_id: req.product_id,
-      user_id: req.params.id,
-      image: req.image,
-      name: req.name,
-      price: req.price,
-    });
+    const cart = await Cart.create(req.body);
 
     res.status(201).send(cart);
   } catch (error) {
